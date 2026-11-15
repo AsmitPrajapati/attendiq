@@ -1,3 +1,14 @@
-import React from 'react';import {createRoot} from 'react-dom/client';import {BrowserRouter} from 'react-router-dom';
-import App from './App.jsx';import {AppProvider} from './context/AppContext.jsx';import './global.css';
-createRoot(document.getElementById('root')).render(<BrowserRouter><AppProvider><App/></AppProvider></BrowserRouter>);
+import React from 'react';
+import {createRoot} from 'react-dom/client';
+import {HashRouter} from 'react-router-dom';
+import App from './App.jsx';
+import {AppProvider} from './context/AppContext.jsx';
+import './global.css';
+
+createRoot(document.getElementById('root')).render(
+  <HashRouter>
+    <AppProvider>
+      <App/>
+    </AppProvider>
+  </HashRouter>
+);
